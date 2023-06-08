@@ -1,4 +1,6 @@
-<h1>Sign up</h1>
+<h1>アカウント作成</h1>
+
+<h1>user New</h1>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -16,13 +18,13 @@
   <%= f.label :ユーザー名 %>
   <%= f.text_field :name %>
 
-  <p><%= f.label :email %>
+  <p><%= f.label :Eメール %>
   <%= f.email_field :email %></p>
 
-  <p><%= f.label :password %>
+  <p><%= f.label :パスワード %>
   <%= f.password_field :password %></p>
 
-  <p><%= f.label :パスワード確認用 %>
+  <p><%= f.label :パスワード（確認） %>
   <%= f.password_field :password_confirmation %></p>
 
   <p><%= f.submit "アカウント作成" %></p>
