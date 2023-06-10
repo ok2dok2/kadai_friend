@@ -23,6 +23,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'bcrypt'
+  gem 'pry-rails'
 end
 
 group :test do
