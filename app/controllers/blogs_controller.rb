@@ -15,9 +15,28 @@ class BlogsController < ApplicationController
     else
       render :new
     end
+  
+  def confirm
+    @blog = Blog.new(blog_params)
+  end
+
+
+  def show
+    @blog = Blog.find(params[:id])
+  end
     
   def edit
-  
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    @blog = Blog.find(params[:id])
+    if @blog.update(blog_params)
+      redirect_to blogs_path, notice: "更新しました"
+    else
+      render :new
+    end
+
   end
   
   def destroy
@@ -25,12 +44,7 @@ class BlogsController < ApplicationController
     @blog.destroy
     redirect_to blogs_path
   end
-  
-  def show
-    @blog = Blog.find(params[:id])
-  end
-
-  end
+end
 
   private
 

@@ -1,8 +1,8 @@
 <h1>blogs_new</h1>
 
-<h1>Blogs#new</h1>
+<h1>Blogs#edit</h1>
 
-<%= form_with(model: @blog, local: true, url: blog_confirm_path) do |form| %>
+<%= form_with(model: @blog, local: true) do |form| %>
     <div class="blog_title">
       <%= form.label :title %>
       <%= form.text_field :title %>
