@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
     else
       render :new
     end
-  
+  end
   # def confirm
   #   @blog = Blog.new(blog_params)
   # end
@@ -45,12 +45,11 @@ class BlogsController < ApplicationController
     @blog.destroy
     redirect_to blogs_path
   end
-end
 
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :content, :img)
+    params.require(:blog).permit(:title, :content, :image, :image_cache)
   end
 
 end
