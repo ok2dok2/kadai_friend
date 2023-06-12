@@ -16,14 +16,15 @@ class BlogsController < ApplicationController
       render :new
     end
   
-  def confirm
-    @blog = Blog.new(blog_params)
-  end
+  # def confirm
+  #   @blog = Blog.new(blog_params)
+  # end
 
 
   def show
     @blog = Blog.find(params[:id])
   end
+  
     
   def edit
     @blog = Blog.find(params[:id])
@@ -49,7 +50,7 @@ end
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:title, :content, :img)
   end
 
 end
