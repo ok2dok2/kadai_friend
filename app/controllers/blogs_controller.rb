@@ -16,16 +16,15 @@ class BlogsController < ApplicationController
       render :new
     end
   end
-  # def confirm
-  #   @blog = Blog.new(blog_params)
-  # end
-
+  
+  def confirm
+    @blog = Blog.new(blog_params)
+  end
 
   def show
     @blog = Blog.find(params[:id])
   end
-  
-    
+      
   def edit
     @blog = Blog.find(params[:id])
   end

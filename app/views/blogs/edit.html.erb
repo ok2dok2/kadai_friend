@@ -1,7 +1,5 @@
 <h1>blogs_new</h1>
 
-<h1>Blogs#edit</h1>
-
 <%= form_with(model: @blog, local: true) do |form| %>
     <div class="blog_title">
       <%= form.label :title %>
@@ -13,5 +11,3 @@
     </div>
     <%= form.submit %>
   <% end %>
-
-<p>Find me in app/views/blogs/new.html.erb</p>
